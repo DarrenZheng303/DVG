@@ -151,7 +151,7 @@ export VIDEO_LENGTH=121
 export ENABLE_DVG=true
 export DVG_BUDGET=0.5
 export ENABLE_TAE=false
-bash run_hunyuanvideo.sh
+bash scripts/run_hunyuanvideo.sh
 ```
 
 Common options:
@@ -175,7 +175,7 @@ export DVG_BUDGET=0.5
 export ENABLE_STEP_DISTILL=false #12step distill or 50step
 export ENABLE_TAE=false
 
-bash run_hunyuanvideo1_5.sh
+bash scripts/run_hunyuanvideo1_5.sh
 ```
 
 Common options:
@@ -199,7 +199,7 @@ export ENABLE_DVG=true
 export DVG_BUDGET=0.5
 export ENABLE_TAE=false
 
-bash run_wan_2_2.sh
+bash scripts/run_wan_2_2.sh
 ```
 
 Common options:
@@ -226,7 +226,7 @@ export DVG_BUDGET=0.5
 export ENABLE_TAE=false
 export ENABLE_TORCH_COMPILE=false
 
-bash run_wan_2_1_1_3b.sh
+bash scripts/run_wan_2_1_1_3b.sh
 ```
 
 Common options:

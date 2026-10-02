@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
 export PYTHONPATH="${REPO_ROOT}${PYTHONPATH:+:${PYTHONPATH}}"
 HV15_ROOT="${REPO_ROOT}/HunyuanVideo-1.5"
 PROMPT_LIST_T2V="${PROMPT_LIST_T2V:-${REPO_ROOT}/prompts_t2v.jsonl}"
