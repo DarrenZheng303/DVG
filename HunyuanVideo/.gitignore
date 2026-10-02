@@ -1,0 +1,4 @@
+__pycache__
+/ckpts/**/
+results
+coordinate_noise_cache
