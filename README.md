@@ -125,7 +125,7 @@ In this repository, DVG is integrated with four video-generation configurations:
 The repository is structured as a research workspace around those backbones, including:
 
 - DVG-integrated inference code
-- root-level helper launch scripts
+- helper launch scripts in `scripts/`
 - prompt lists for batched evaluation
 - coordinate re-noising caches
 - experiment outputs and logs
@@ -148,6 +148,7 @@ export MODEL_BASE=/path/to/your/hunyuanvideo/checkpoints
 export CUDA_VISIBLE_DEVICES=0
 export RESOLUTION=720p
 export VIDEO_LENGTH=121
+export ENABLE_TORCH_COMPILE=true
 export ENABLE_DVG=true
 export DVG_BUDGET=0.5
 export ENABLE_TAE=false
@@ -160,6 +161,7 @@ Common options:
 - `DVG_BUDGET=0.5`
 - `RESOLUTION=540p|720p`
 - `VIDEO_LENGTH=121`
+- `ENABLE_TORCH_COMPILE=true|false` 
 - `ENABLE_TAE=true|false`
 
 ### 2️⃣ HunyuanVideo-1.5
@@ -170,6 +172,7 @@ export MODEL_PATH=/path/to/your/HunyuanVideo-1.5
 export CUDA_VISIBLE_DEVICES=0
 export TASK_MODE=t2v        # or i2v
 export VIDEO_LENGTH=121
+export ENABLE_TORCH_COMPILE=true
 export ENABLE_DVG=true
 export DVG_BUDGET=0.5
 export ENABLE_STEP_DISTILL=false #12step distill or 50step
@@ -184,6 +187,7 @@ Common options:
 - `ENABLE_DVG=true|false`
 - `DVG_BUDGET=0.5`
 - `ENABLE_STEP_DISTILL=true|false`
+- `ENABLE_TORCH_COMPILE=true|false` 
 - `ENABLE_TAE=true|false`
 - `VIDEO_LENGTH=121`
 
@@ -195,6 +199,7 @@ export MODEL_PATH=/path/to/your/Wan2.2-T2V-A14B
 export CUDA_VISIBLE_DEVICES=0,1
 export TASK_MODE=t2v        # or i2v
 export ULYSSES_SIZE=2   # 2 gpu FSDP
+export ENABLE_TORCH_COMPILE=false
 export ENABLE_DVG=true 
 export DVG_BUDGET=0.5
 export ENABLE_TAE=false
@@ -211,6 +216,7 @@ Common options:
 - `ULYSSES_SIZE=2`
 - `ENABLE_DVG=true|false`
 - `DVG_BUDGET=0.5`
+- `ENABLE_TORCH_COMPILE=true|false` 
 - `ENABLE_TAE=true|false`
 
 
@@ -238,7 +244,7 @@ Common options:
 - `ENABLE_DVG=true|false`
 - `DVG_BUDGET=0.5`
 - `ENABLE_TAE=true|false` (uses the TAE decoder compatible with the Wan2.1 VAE)
-- `ENABLE_TORCH_COMPILE=true|false`
+- `ENABLE_TORCH_COMPILE=true|false` 
 
 ## 🙏 Acknowledgements
 
