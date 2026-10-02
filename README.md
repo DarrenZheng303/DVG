@@ -24,7 +24,7 @@
 <table>
   <tr>
     <td colspan="2" align="center" style="border-bottom:0">
-      <b>HunyuanVideo · T2V 720p / 50 steps</b><br>E2E: 2672.9s → 923.1s<br>(2.90× speedup)
+      <b>HunyuanVideo · T2V 720p / 50 steps</b><br>2672.9s → 923.1s (<b>2.90×</b> speedup)
     </td>
   </tr>
   <tr>
@@ -39,7 +39,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center" style="border-bottom:0">
-      <b>Wan2.2 A14B · T2V 480p / 40 steps</b><br>E2E: 802.899s → 353.469s<br>(2.27× speedup)
+      <b>Wan2.2 A14B · T2V 480p / 40 steps</b><br>802.899s → 353.469s (<b>2.27×</b> speedup)
     </td>
   </tr>
   <tr>
@@ -61,7 +61,7 @@
 <table>
   <tr>
     <td colspan="2" align="center" style="border-bottom:0">
-      <b>HunyuanVideo-1.5 · I2V 480p / 50 steps</b><br>E2E: 832.4s → 296.3s<br>(2.81× speedup)
+      <b>HunyuanVideo-1.5 · I2V 480p / 50 steps</b><br>832.4s → 296.3s (<b>2.81×</b> speedup)
     </td>
   </tr>
   <tr>
@@ -76,7 +76,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center" style="border-top:0;border-bottom:0">
-      <b>HunyuanVideo-1.5 · I2V 480p / 12-step distilled</b><br>E2E: 114.8s → 44.4s<br>(2.59× speedup)
+      <b>HunyuanVideo-1.5 · I2V 480p / 12-step distilled</b><br>114.8s → 44.4s (<b>2.59×</b> speedup)
     </td>
   </tr>
   <tr>
@@ -92,7 +92,7 @@
 </table>
 
 <p align="center">
-  <sub>Speed benchmarks measured on an NVIDIA A800-SXM4-80GB.</sub>
+  <sub>Latency measured on an NVIDIA A800-SXM4-80GB. Results may vary across platforms and hardware configurations.</sub>
 </p>
 
 ---
