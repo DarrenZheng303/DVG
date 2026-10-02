@@ -23,80 +23,70 @@
 
 <table>
   <tr>
-    <td align="center" width="50%">
+    <td colspan="2" align="center" style="border-bottom:0">
+      <b>HunyuanVideo · T2V 720p / 50 steps</b><br>E2E: 2672.9s → 923.1s<br>(2.90× speedup)
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%" style="border-top:0">
       <img src="demo_videos/HunyuanVideo/A%20person%20is%20clay%20pottery%20making-0.gif" width="100%" alt="HunyuanVideo: A person is clay pottery making">
-      <br>
-      <sub><b>HunyuanVideo</b> · A person is clay pottery making</sub>
+      <br><sub>A person is clay pottery making</sub>
     </td>
-    <td align="center" width="50%">
+    <td align="center" width="50%" style="border-top:0">
       <img src="demo_videos/HunyuanVideo/a%20horse%20galloping%20across%20an%20open%20field-0.gif" width="100%" alt="HunyuanVideo: A horse galloping across an open field">
-      <br>
-      <sub><b>HunyuanVideo</b> · A horse galloping across an open field</sub>
+      <br><sub>A horse galloping across an open field</sub>
     </td>
   </tr>
   <tr>
-    <td colspan="2" align="center">
-      <sub><b>HunyuanVideo · T2V 720p / 50 steps</b> · E2E: 2672.9s → 923.1s (2.90× speedup)</sub>
+    <td colspan="2" align="center" style="border-bottom:0">
+      <b>Wan2.2 A14B · T2V 480p / 40 steps</b><br>E2E: 802.899s → 353.469s<br>(2.27× speedup)
     </td>
   </tr>
   <tr>
-    <td align="center" width="50%">
+    <td align="center" width="50%" style="border-top:0">
       <img src="demo_videos/Wan2.2/00083_a_zebra_and_a_giraffe.gif" width="100%" alt="Wan2.2: A zebra and a giraffe">
-      <br>
-      <sub><b>Wan2.2</b> · A zebra and a giraffe</sub>
+      <br><sub>A zebra and a giraffe</sub>
     </td>
-    <td align="center" width="50%">
+    <td align="center" width="50%" style="border-top:0">
       <img src="demo_videos/Wan2.2/00532_A_cute_happy_Corgi_playing_in_park_sunset_black_and_white.gif" width="100%" alt="Wan2.2: A cute happy Corgi playing in park, sunset, black and white">
-      <br>
-      <sub><b>Wan2.2</b> · A cute happy Corgi playing in park, sunset, black and white</sub>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <sub><b>Wan2.2 A14B · T2V 480p / 40 steps</b> · E2E: 802.899s → 353.469s (2.27× speedup)</sub>
+      <br><sub>A cute happy Corgi playing in park, sunset, black and white</sub>
     </td>
   </tr>
 </table>
 
 ### Image-to-Video (I2V)
 
-<p align="center">
-  <i>All I2V demos below are generated with <b>HunyuanVideo-1.5</b>.</i>
-</p>
+
 
 <table>
   <tr>
-    <td align="center" width="50%">
+    <td colspan="2" align="center" style="border-bottom:0">
+      <b>HunyuanVideo-1.5 · I2V 480p / 50 steps</b><br>E2E: 832.4s → 296.3s<br>(2.81× speedup)
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%" style="border-top:0;border-bottom:1px solid #444">
       <img src="demo_videos/HunyuanVideo1.5/50step/a%20view%20of%20a%20star%20trail%20in%20the%20night%20sky-1.gif" width="100%" alt="HunyuanVideo-1.5 50-step: A view of a star trail in the night sky">
-      <br>
-      <sub><b>HunyuanVideo-1.5 (50-step)</b> · A view of a star trail in the night sky</sub>
+      <br><sub>A view of a star trail in the night sky</sub>
     </td>
-    <td align="center" width="50%">
+    <td align="center" width="50%" style="border-top:0;border-bottom:1px solid #444">
       <img src="demo_videos/HunyuanVideo1.5/50step/a%20view%20of%20a%20waterfall%20from%20a%20distance-4.gif" width="100%" alt="HunyuanVideo-1.5 50-step: A view of a waterfall from a distance">
-      <br>
-      <sub><b>HunyuanVideo-1.5 (50-step)</b> · A view of a waterfall from a distance</sub>
+      <br><sub>A view of a waterfall from a distance</sub>
     </td>
   </tr>
   <tr>
-    <td colspan="2" align="center">
-      <sub><b>HunyuanVideo-1.5 · I2V 480p / 50 steps</b> · E2E: 832.4s → 296.3s (2.81× speedup)</sub>
+    <td colspan="2" align="center" style="border-top:0;border-bottom:0">
+      <b>HunyuanVideo-1.5 · I2V 480p / 12-step distilled</b><br>E2E: 114.8s → 44.4s<br>(2.59× speedup)
     </td>
   </tr>
   <tr>
-    <td align="center" width="50%">
+    <td align="center" width="50%" style="border-top:0">
       <img src="demo_videos/HunyuanVideo1.5/12step/a%20blue%20fishing%20boat%20is%20navigating%20in%20the%20ocean%20next%20to%20a%20cruise%20ship-1.gif" width="100%" alt="HunyuanVideo-1.5 step-distilled: A blue fishing boat is navigating in the ocean next to a cruise ship">
-      <br>
-      <sub><b>HunyuanVideo-1.5 (step-distilled)</b> · A blue fishing boat is navigating in the ocean next to a cruise ship</sub>
+      <br><sub>A blue fishing boat is navigating in the ocean next to a cruise ship</sub>
     </td>
-    <td align="center" width="50%">
+    <td align="center" width="50%" style="border-top:0">
       <img src="demo_videos/HunyuanVideo1.5/12step/a%20view%20of%20a%20snowy%20mountain%20side%20with%20many%20buildings-1.gif" width="100%" alt="HunyuanVideo-1.5 step-distilled: A view of a snowy mountain side with many buildings">
-      <br>
-      <sub><b>HunyuanVideo-1.5 (step-distilled)</b> · A view of a snowy mountain side with many buildings</sub>
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <sub><b>HunyuanVideo-1.5 · I2V 480p / 12-step distilled</b> · E2E: 114.8s → 44.4s (2.59× speedup)</sub>
+      <br><sub>A view of a snowy mountain side with many buildings</sub>
     </td>
   </tr>
 </table>
