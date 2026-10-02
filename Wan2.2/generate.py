@@ -23,10 +23,6 @@ from wan.utils.utils import merge_video_audio, save_video, str2bool
 
 
 EXAMPLE_PROMPT = {
-    "t2v-1.3B": {
-        "prompt":
-            "Two anthropomorphic cats in comfy boxing gear and bright gloves fight intensely on a spotlighted stage.",
-    },
     "t2v-A14B": {
         "prompt":
             "Two anthropomorphic cats in comfy boxing gear and bright gloves fight intensely on a spotlighted stage.",
@@ -153,10 +149,8 @@ def _validate_args(args):
 
     if args.task == "i2v-A14B":
         assert args.image is not None, "Please specify the image path for i2v."
-    if args.task == "t2v-1.3B" and args.image is not None:
-        raise ValueError("Wan2.1 T2V 1.3B does not accept an I2V reference image.")
-    if args.enable_dvg and args.task not in ("t2v-A14B", "t2v-1.3B"):
-        raise ValueError("DVG is currently wired only for tasks t2v-A14B and t2v-1.3B.")
+    if args.enable_dvg and args.task != "t2v-A14B":
+        raise ValueError("DVG is currently wired only for task t2v-A14B in Wan2.2.")
 
     cfg = WAN_CONFIGS[args.task]
 

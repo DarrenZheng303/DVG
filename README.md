@@ -35,6 +35,11 @@
     </td>
   </tr>
   <tr>
+    <td colspan="2" align="center">
+      <sub><b>HunyuanVideo · T2V 720p / 50 steps</b> · E2E: 2672.9s → 923.1s (2.90× speedup)</sub>
+    </td>
+  </tr>
+  <tr>
     <td align="center" width="50%">
       <img src="demo_videos/Wan2.2/00083_a_zebra_and_a_giraffe.gif" width="100%" alt="Wan2.2: A zebra and a giraffe">
       <br>
@@ -44,6 +49,11 @@
       <img src="demo_videos/Wan2.2/00532_A_cute_happy_Corgi_playing_in_park_sunset_black_and_white.gif" width="100%" alt="Wan2.2: A cute happy Corgi playing in park, sunset, black and white">
       <br>
       <sub><b>Wan2.2</b> · A cute happy Corgi playing in park, sunset, black and white</sub>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <sub><b>Wan2.2 A14B · T2V 480p / 40 steps</b> · E2E: 802.899s → 353.469s (2.27× speedup)</sub>
     </td>
   </tr>
 </table>
@@ -68,6 +78,11 @@
     </td>
   </tr>
   <tr>
+    <td colspan="2" align="center">
+      <sub><b>HunyuanVideo-1.5 · I2V 480p / 50 steps</b> · E2E: 832.4s → 296.3s (2.81× speedup)</sub>
+    </td>
+  </tr>
+  <tr>
     <td align="center" width="50%">
       <img src="demo_videos/HunyuanVideo1.5/12step/a%20blue%20fishing%20boat%20is%20navigating%20in%20the%20ocean%20next%20to%20a%20cruise%20ship-1.gif" width="100%" alt="HunyuanVideo-1.5 step-distilled: A blue fishing boat is navigating in the ocean next to a cruise ship">
       <br>
@@ -79,7 +94,16 @@
       <sub><b>HunyuanVideo-1.5 (step-distilled)</b> · A view of a snowy mountain side with many buildings</sub>
     </td>
   </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <sub><b>HunyuanVideo-1.5 · I2V 480p / 12-step distilled</b> · E2E: 114.8s → 44.4s (2.59× speedup)</sub>
+    </td>
+  </tr>
 </table>
+
+<p align="center">
+  <sub>Speed benchmarks measured on an NVIDIA A800-SXM4-80GB.</sub>
+</p>
 
 ---
 
@@ -203,13 +227,14 @@ Common options:
 ### 4️⃣ Wan2.1 T2V 1.3B
 
 ```bash
-export CONDA_ENV_PATH=/path/to/your/Wan2.2/conda/env
+export CONDA_ENV_PATH=/path/to/your/Wan2.1/conda/env
 export MODEL_PATH=/path/to/your/Wan2.1-T2V-1.3B
 export CUDA_VISIBLE_DEVICES=0
 export ULYSSES_SIZE=1
 export ENABLE_DVG=true
 export DVG_BUDGET=0.5
 export ENABLE_TAE=false
+export ENABLE_TORCH_COMPILE=false
 
 bash run_wan_2_1_1_3b.sh
 ```
@@ -223,6 +248,7 @@ Common options:
 - `ENABLE_DVG=true|false`
 - `DVG_BUDGET=0.5`
 - `ENABLE_TAE=true|false` (uses the TAE decoder compatible with the Wan2.1 VAE)
+- `ENABLE_TORCH_COMPILE=true|false`
 
 ## 🙏 Acknowledgements
 
@@ -231,6 +257,7 @@ This repository builds on top of the open-source releases of:
 - [Tencent HunyuanVideo](https://github.com/Tencent-Hunyuan/HunyuanVideo)
 - [Tencent HunyuanVideo-1.5](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5)
 - [Wan2.2](https://github.com/Wan-Video/Wan2.2)
+- [Wan2.1](https://github.com/Wan-Video/Wan2.1)
 - [TAEHV](https://github.com/madebyollin/taehv)
 
 We thank the authors of these projects for releasing their code and models.
@@ -257,6 +284,7 @@ Please note that bundled upstream backbones and model-related components may rem
 - `HunyuanVideo/`
 - `HunyuanVideo-1.5/`
 - `Wan2.2/`
+- `Wan2.1/`
 - `taehv/`
 
 Please refer to the license files and model terms provided in those subdirectories before redistribution or downstream use.

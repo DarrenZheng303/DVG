@@ -7,11 +7,11 @@ from .taehv import StreamingTAEHV, TAEHV
 UPSTREAM_COMMIT = "011dfc2112197741c540e0bdd5b7b67bcc930771"
 WEIGHTS_DIR = Path(__file__).resolve().parent / "weights"
 
-# Wan2.2 A14B uses the Wan2.1 VAE, so it must use taew2_1 weights.
+# Both Wan2.1 T2V and Wan2.2 A14B use the Wan2.1 VAE and taew2_1 weights.
 CHECKPOINTS = {
     "hunyuan_video": "taehv.pth",
     "hunyuan_video_1_5": "taehv1_5.pth",
-    "wan2_2_14b": "taew2_1.pth",
+    "wan2_1_vae": "taew2_1.pth",
 }
 
 

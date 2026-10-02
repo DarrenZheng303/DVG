@@ -39,7 +39,8 @@ class DVG_WanT2V(DVG):
 
     def predict_x0(self, scheduler, noise_pred, t, latents, extra_step_kwargs):
         sample = self.tensor(latents)
-        idx = scheduler.index_for_timestep(t.to(scheduler.timesteps.device), scheduler.timesteps)
+        idx = scheduler.index_for_timestep(
+            t.to(scheduler.timesteps.device), scheduler.timesteps)
         sigma = scheduler.sigmas[idx].to(device=sample.device, dtype=sample.dtype)
         return sample - sigma * noise_pred.unsqueeze(0)
 
@@ -49,10 +50,10 @@ class DVG_WanT2V(DVG):
         scheduler._step_index = step_index
 
     def renoise(self, scheduler, resized_x0, stage_noise, next_timestep, target_dtype):
-        return [scheduler.add_noise(resized_x0, stage_noise, next_timestep)[0].to(dtype=target_dtype)]
+        if next_timestep.ndim == 0:
+            next_timestep = next_timestep.unsqueeze(0)
+        noised = scheduler.add_noise(resized_x0, stage_noise, next_timestep)[0]
+        return [noised.to(dtype=target_dtype)]
 
     def after_transition(self, new_latents, target_dtype, **context):
         return new_latents, self._seq_len()
-
-
-DVG_Wan2_2 = DVG_WanT2V

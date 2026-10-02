@@ -3,11 +3,11 @@ set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
 export PYTHONPATH="${REPO_ROOT}${PYTHONPATH:+:${PYTHONPATH}}"
-WAN_ROOT="${REPO_ROOT}/Wan2.2"
+WAN_ROOT="${REPO_ROOT}/Wan2.1"
 PROMPT_LIST="${PROMPT_LIST:-${REPO_ROOT}/prompts_t2v.jsonl}"
 
 ##### variables to edit
-# Enable torch.compile to speed up subsequent runs after the first compilation.
+# Enable torch.compile; the first compiled run includes compilation overhead.
 ENABLE_TORCH_COMPILE="${ENABLE_TORCH_COMPILE:-false}"
 # Enable DVG and set the computation budget ratio.
 ENABLE_DVG="${ENABLE_DVG:-true}"
@@ -71,9 +71,8 @@ CMD=(
   --sample_guide_scale "${GUIDE_SCALE}"
   --frame_num "${FRAME_NUM}"
   --base_seed "42"
-  --convert_model_dtype
-  --enable_torch_compile "${ENABLE_TORCH_COMPILE}"
   --enable_tae "${ENABLE_TAE}"
+  --enable_torch_compile "${ENABLE_TORCH_COMPILE}"
   --ulysses_size "${ULYSSES_SIZE}"
 )
 

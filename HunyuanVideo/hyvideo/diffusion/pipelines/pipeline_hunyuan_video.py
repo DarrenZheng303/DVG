@@ -253,6 +253,8 @@ class HunyuanVideoPipeline(DiffusionPipeline):
         torch._dynamo.config.accumulated_cache_size_limit = 192
         for block in self.transformer.double_blocks:
             block.forward = torch.compile(block.forward)
+        for block in self.transformer.single_blocks:
+            block.forward = torch.compile(block.forward)
         self._transformer_blocks_compiled = True
 
     def encode_prompt(

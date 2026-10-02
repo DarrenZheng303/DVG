@@ -458,7 +458,7 @@ class HunyuanVideoSampler(Inference):
         else:
             pipeline = pipeline.to(device)
         if getattr(args, "enable_torch_compile", False):
-            logger.info("Enabling torch.compile for transformer double blocks...")
+            logger.info("Enabling torch.compile for transformer double and single blocks...")
             pipeline.enable_torch_compile()
 
         return pipeline

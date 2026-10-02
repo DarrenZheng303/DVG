@@ -1,4 +1,4 @@
-"""Wan 2.1-VAE-compatible TAE decode adapter (used by Wan2.2 A14B)."""
+"""TAE decode adapter for models using the Wan2.1 VAE."""
 
 import logging
 
@@ -8,7 +8,7 @@ from . import TAEHV, checkpoint_path
 
 
 def load_wan_decoder(device, dtype):
-    path = checkpoint_path("wan2_2_14b")
+    path = checkpoint_path("wan2_1_vae")
     logging.info("Loading Wan TAE decoder from %s", path)
     return TAEHV(checkpoint_path=str(path)).to(device=device, dtype=dtype).eval()
 
