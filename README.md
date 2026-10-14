@@ -1,12 +1,12 @@
-# 🎬 Dynamic Video Generation: Shaping Video Generation Across Time and Space
+# 🎬 Dynamic Video Generation: Shaping Video Generation Across Time and Space [NeurIPS 2026]
 
 <p align="center">
   <a href="https://arxiv.org/abs/2605.21042"><img src="https://img.shields.io/badge/arXiv-2605.21042-b31b1b.svg" alt="arXiv"></a>
 </p>
 
 <p align="center">
-  <b>Dynamic Video Generation (DVG)</b> is a training-free acceleration framework for diffusion-based video generation.<br>
-  It dynamically allocates computation across <b>time</b> and <b>space</b> during sampling, enabling faster generation under a fixed compute budget.
+  <b>Dynamic Video Generation (DVG)</b> is a training-free acceleration framework for video generation.<br>
+  It dynamically allocates computation across latent <b>resolution</b> and <b>frame rate</b> during sampling, enabling faster generation under a fixed compute budget.
 </p>
 
 <p align="center">
@@ -17,9 +17,6 @@
 
 ### Text-to-Video (T2V)
 
-<p align="center">
-  <i>All demos in this section are text-to-video generations.</i>
-</p>
 
 <table>
   <tr>
@@ -39,7 +36,7 @@
   </tr>
   <tr>
     <td colspan="2" align="center" style="border-bottom:0">
-      <b>Wan2.2 A14B · T2V 480p / 40 steps</b><br>802.899s → 353.469s (<b>2.27×</b> speedup)
+      <b>Wan2.2 A14B · T2V 480p / 40 steps</b><br>802.9s → 353.5s (<b>2.27×</b> speedup)
     </td>
   </tr>
   <tr>
@@ -102,9 +99,9 @@
 
 - `2026.05` Paper released on arXiv: [Dynamic Video Generation: Shaping Video Generation Across Time and Space](https://arxiv.org/abs/2605.21042).
 - `2026.06` Research codebase organized with DVG integrations for `HunyuanVideo`, `HunyuanVideo-1.5`, and `Wan2.2`.
-- 🔥`2026.06` Root README reorganized in a paper-project style.
+- `2026.06` Root README reorganized in a paper-project style.
 - `2026.09` Research codebase organized with DVG integrations for `Wan2.1 1.3b`.
-- 🎉`2026.09` Our work **Dynamic Video Generation: Shaping Video Generation Across Time and Space** was accepted to **NeurIPS 2026**!
+- `2026.09` Our work **Dynamic Video Generation: Shaping Video Generation Across Time and Space** was accepted to **NeurIPS 2026**! 🎉🎉🎉
 
 
 ## 🌟 Introduction
@@ -133,10 +130,10 @@ The repository is structured as a research workspace around those backbones, inc
 ## ⚙️ Installation
 
 ```bash
-git clone http://github.com/xxxxx/dynamic-video-gen.git
+git clone https://github.com/DarrenZheng303/DVG.git
 ```
 
-Download TAE checkpoint into `dvg/taehv/weights/` as described in [dvg/taehv/README.md](dvg/taehv/README.md) before running with `ENABLE_TAE=true`.
+When denoising time is highly compressed, VAE decoding becomes the main bottleneck of video generation. Download TAE checkpoint into `dvg/taehv/weights/` as described in [dvg/taehv/README.md](dvg/taehv/README.md) before running with `ENABLE_TAE=true` for faster decoding!
 
 ## 🎥 Inference
 
@@ -152,6 +149,7 @@ export ENABLE_TORCH_COMPILE=true
 export ENABLE_DVG=true
 export DVG_BUDGET=0.5
 export ENABLE_TAE=false
+
 bash scripts/run_hunyuanvideo.sh
 ```
 
@@ -197,7 +195,7 @@ Common options:
 export CONDA_ENV_PATH=/path/to/your/conda/env
 export MODEL_PATH=/path/to/your/Wan2.2-T2V-A14B
 export CUDA_VISIBLE_DEVICES=0,1
-export TASK_MODE=t2v        # or i2v
+export TASK_MODE=t2v        
 export ULYSSES_SIZE=2   # 2 gpu FSDP
 export ENABLE_TORCH_COMPILE=false
 export ENABLE_DVG=true 
@@ -232,7 +230,7 @@ export DVG_BUDGET=0.5
 export ENABLE_TAE=false
 export ENABLE_TORCH_COMPILE=false
 
-bash scripts/run_wan_2_1_1_3b.sh
+bash scripts/run_wan_2_1.sh
 ```
 
 Common options:
@@ -243,7 +241,7 @@ Common options:
 - `ULYSSES_SIZE=1`
 - `ENABLE_DVG=true|false`
 - `DVG_BUDGET=0.5`
-- `ENABLE_TAE=true|false` (uses the TAE decoder compatible with the Wan2.1 VAE)
+- `ENABLE_TAE=true|false` 
 - `ENABLE_TORCH_COMPILE=true|false` 
 
 ## 🙏 Acknowledgements
@@ -254,7 +252,6 @@ This repository builds on top of the open-source releases of:
 - [Tencent HunyuanVideo-1.5](https://github.com/Tencent-Hunyuan/HunyuanVideo-1.5)
 - [Wan2.2](https://github.com/Wan-Video/Wan2.2)
 - [Wan2.1](https://github.com/Wan-Video/Wan2.1)
-- [TAEHV](https://github.com/madebyollin/taehv)
 
 We thank the authors of these projects for releasing their code and models.
 
@@ -281,6 +278,5 @@ Please note that bundled upstream backbones and model-related components may rem
 - `HunyuanVideo-1.5/`
 - `Wan2.2/`
 - `Wan2.1/`
-- `taehv/`
 
 Please refer to the license files and model terms provided in those subdirectories before redistribution or downstream use.
