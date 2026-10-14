@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <b>Dynamic Video Generation (DVG)</b> is a training-free acceleration framework for video generation.<br>
-  It dynamically allocates computation across latent <b>resolution</b> and <b>frame rate</b> during sampling, enabling faster generation under a fixed compute budget.
+  <b>Dynamic Video Generation (DVG)</b> is a training-free acceleration framework for efficient video generation.<br>
+  It dynamically allocates computation across latent <b>resolution</b> and <b>frame rate</b> during sampling, enabling faster generation under a fixed compute budget. <br>DVG fits well with all kinds of step-distillation and caching method, demonstrating its potential as a useful component in today’s large-scale efficient video generation system.
 </p>
 
 <p align="center">
